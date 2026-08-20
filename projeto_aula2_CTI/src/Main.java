@@ -27,12 +27,19 @@ public class Main {
                 "Entre R$ 1 e R$ 10 milhões",
                 consultor);
 
+        Caminhao caminhao = new Caminhao(
+                "ABC-1234",
+                "Volvo FH16");
+        caminhao.exibirResumo();
+
         // ETAPA 4: usar getters para consultar informações.
         // Não acessamos cliente.nivel diretamente porque o atributo é private.
         System.out.println("\n--- OBJETOS CRIADOS ---");
         System.out.println("Código do cliente: " + cliente.getCodigoCti());
         System.out.println("Nome do consultor: " + consultor.getNome());
         System.out.println("Nome do serviço: " + servico.getNome());
+        System.out.println("Placa do caminhão: " + caminhao.getPlaca());
+        System.out.println("Modelo do caminhão: " + caminhao.getModelo());
 
         // ETAPA 5: testar um valor inválido no setter do Cliente.
         // O nível só pode ser 1, 2 ou 3.
